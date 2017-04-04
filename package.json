@@ -1,6 +1,6 @@
 {
   "name": "language-prometheus-rules",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Prometheus Alert language support in Atom",
   "engines": {
     "atom": "*"
