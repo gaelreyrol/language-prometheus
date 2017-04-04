@@ -10,7 +10,7 @@ ALERT node_cpu_threshold_exceeded
   }
 
 ALERT node_mem_threshold_exceeded
-  IF ((node_memory_MemFree{job='node'} + node_memory_Cached{job='node'} + node_memory_Buffers{job='node'}) / 1000000) < 500
+  IF ((node_memory_MemFree{job='node'} + node_memory_Cached{job='node'} + node_memory_Buffers{job='node',instance=~'ubuntu-.*'}) / 1000000) < 500
   FOR 30s
   LABELS { severity = "warning" }
   ANNOTATIONS {

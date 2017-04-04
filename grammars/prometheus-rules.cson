@@ -15,6 +15,9 @@
     'include': '#time'
   }
   {
+    'include': '#regexp'
+  }
+  {
     'include': '#string'
   }
 ]
@@ -52,6 +55,20 @@
       {
         'match': '\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))\\b',
         'name': 'constant.numeric.prometheus-rules'
+      }
+    ]
+  'regexp':
+    'patterns': [
+      {
+        'begin': '~\''
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.string.begin.prometheus-rules'
+        'end': '\''
+        'endCaptures':
+          '0':
+            'name': 'punctuation.definition.string.end.prometheus-rules'
+        'name': 'string.regexp.prometheus-rules'
       }
     ]
   'string':
