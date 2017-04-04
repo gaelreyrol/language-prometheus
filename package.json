@@ -1,5 +1,5 @@
 {
-  "name": "language-prometheus-rules",
+  "name": "language-prometheus",
   "version": "0.3.0",
   "description": "Prometheus Alert language support in Atom",
   "engines": {
@@ -8,10 +8,10 @@
   "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/Zevran/language-prometheus-rules.git"
+    "url": "https://github.com/Zevran/language-prometheus.git"
   },
   "bugs": {
-    "url": "https://github.com/Zevran/language-prometheus-rules/issues"
+    "url": "https://github.com/Zevran/language-prometheus/issues"
   },
   "author": "Gaël Reyrol <gael.reyrol@gmail.com>",
   "license": "MIT"
