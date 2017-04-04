@@ -1,0 +1,13 @@
+'.source.rules':
+  'Alert template':
+    'prefix': 'alert'
+    'body': """
+      ALERT ${1:name}
+        IF ${2:query}
+        FOR ${3:duration}
+        LABELS { ${4} }
+        ANNOTATIONS {
+          summary = "${5}",
+          description = "${6}"
+        }
+    """

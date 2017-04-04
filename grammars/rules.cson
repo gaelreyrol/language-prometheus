@@ -1,6 +1,7 @@
-'scopeName': 'source.prometheus'
-'name': 'Prometheus Rules'
-'fileTypes': ['rules', 'prom']
+'scopeName': 'source.rules'
+'name': 'Prometheus'
+'comment': 'Prometheus alert language'
+'fileTypes': ['rules']
 'patterns': [
   {
     'include': '#comment'
