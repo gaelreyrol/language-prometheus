@@ -1,3 +1,5 @@
+# Comment
+
 ALERT node_cpu_threshold_exceeded
   IF (100 * (1 - avg by(instance)(irate(node_cpu{job='node',mode='idle'}[5m])))) > 80
   FOR 30s
