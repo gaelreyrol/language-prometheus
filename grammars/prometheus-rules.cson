@@ -1,0 +1,27 @@
+'scopeName': 'source.prometheus-rules'
+'name': 'Prometheus Rules'
+'fileTypes': ['rules', 'prom']
+'patterns': [
+  {
+    'match': 'ALERT|IF|FOR|LABELS|ANNOTATIONS',
+    'name': 'keyword.control.prometheus-rules'
+  },
+  {
+    'begin': '"'
+    'end': '"'
+    'name': 'string.quoted.double.prometheus-rules'
+  },
+  {
+    'begin': '\''
+    'end': '\''
+    'name': 'string.quoted.single.prometheus-rules'
+  },
+  {
+    'match': '\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))\\b'
+    'name': 'constant.numeric.prometheus-rules'
+  },
+  {
+    'match': '[0-9]+(ms|[smhdwy])',
+    'name': 'constant.character.prometheus-rules'
+  }
+]

@@ -1,0 +1,26 @@
+ALERT node_cpu_threshold_exceeded
+  IF (100 * (1 - avg by(instance)(irate(node_cpu{job='node',mode='idle'}[5m])))) > 80
+  FOR 30s
+  LABELS { severity = "warning" }
+  ANNOTATIONS {
+      summary = "Instance {{ $labels.instance }} is under high CPU usage",
+      description = "This device's CPU usage has exceeded the threshold with a value of {{ $value }}"
+  }
+
+ALERT node_mem_threshold_exceeded
+  IF ((node_memory_MemFree{job='node'} + node_memory_Cached{job='node'} + node_memory_Buffers{job='node'}) / 1000000) < 500
+  FOR 30s
+  LABELS { severity = "warning" }
+  ANNOTATIONS {
+    summary = "Instance {{ $labels.instance }} is under high memory usage",
+    description = "This device's memory usage has exceeded the threshold with a value of {{ $value }}.",
+  }
+
+ALERT node_filesystem_threshold_exceeded
+  IF (node_filesystem_avail{job='node',mountpoint='/'} / node_filesystem_size{job='node'} * 100) < 50
+  FOR 30s
+  LABELS { severity = "warning" }
+  ANNOTATIONS {
+    summary = "Instance {{ $labels.instance }} filesystem usage is dangerously high",
+    description = "This device's filesystem usage has exceeded the threshold with a value of {{ $value }}.",
+  }
