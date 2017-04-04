@@ -1,6 +1,6 @@
 {
   "name": "language-prometheus",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Prometheus Alert language support in Atom",
   "engines": {
     "atom": "*"
