@@ -2,4 +2,4 @@
 
 Prometheus Alert language support in Atom.
 
-![Screenshot](./screenshot.png)
+![Screenshot](https://github.com/zevran/language-prometheus-rules/raw/master/screenshot.png)
